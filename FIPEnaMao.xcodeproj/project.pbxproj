@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70491A1920B99CD900202952 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70491A1820B99CD900202952 /* Data.swift */; };
 		70F3D87320B8FF010038D81E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3D87220B8FF010038D81E /* AppDelegate.swift */; };
 		70F3D87520B8FF010038D81E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3D87420B8FF010038D81E /* ViewController.swift */; };
 		70F3D87820B8FF010038D81E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F3D87620B8FF010038D81E /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70491A1820B99CD900202952 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		70F3D86F20B8FF010038D81E /* FIPEnaMao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIPEnaMao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F3D87220B8FF010038D81E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70F3D87420B8FF010038D81E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				70F3D89220B9979C0038D81E /* CarModel.swift */,
 				70F3D89420B997AB0038D81E /* CarFunctions.swift */,
+				70491A1820B99CD900202952 /* Data.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70F3D89520B997AB0038D81E /* CarFunctions.swift in Sources */,
+				70491A1920B99CD900202952 /* Data.swift in Sources */,
 				70F3D87520B8FF010038D81E /* ViewController.swift in Sources */,
 				70F3D87320B8FF010038D81E /* AppDelegate.swift in Sources */,
 				70F3D89320B9979C0038D81E /* CarModel.swift in Sources */,
