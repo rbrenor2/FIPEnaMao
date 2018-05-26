@@ -8,11 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FirstScreenViewController: UIViewController {
 
+    @IBOutlet weak var bgButtonView: UIView!
+    @IBAction func startButton(_ sender: Any) {
+        UIView.animate(withDuration: 1, animations: {
+            self.bgButtonView.transform = Animation.rotate()
+        }) {(true) in
+            
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

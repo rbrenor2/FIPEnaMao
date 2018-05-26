@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		70491A1920B99CD900202952 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70491A1820B99CD900202952 /* Data.swift */; };
+		70491A1C20B9A21A00202952 /* VehicleTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70491A1B20B9A21A00202952 /* VehicleTypeView.swift */; };
+		70491A1E20B9A4D600202952 /* DataTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70491A1D20B9A4D600202952 /* DataTableView.swift */; };
+		70491A2020B9AA6700202952 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70491A1F20B9AA6700202952 /* Animation.swift */; };
 		70F3D87320B8FF010038D81E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3D87220B8FF010038D81E /* AppDelegate.swift */; };
-		70F3D87520B8FF010038D81E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3D87420B8FF010038D81E /* ViewController.swift */; };
+		70F3D87520B8FF010038D81E /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3D87420B8FF010038D81E /* FirstScreenViewController.swift */; };
 		70F3D87820B8FF010038D81E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F3D87620B8FF010038D81E /* Main.storyboard */; };
 		70F3D87A20B8FF040038D81E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70F3D87920B8FF040038D81E /* Assets.xcassets */; };
 		70F3D87D20B8FF040038D81E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F3D87B20B8FF040038D81E /* LaunchScreen.storyboard */; };
@@ -19,9 +22,12 @@
 
 /* Begin PBXFileReference section */
 		70491A1820B99CD900202952 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		70491A1B20B9A21A00202952 /* VehicleTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTypeView.swift; sourceTree = "<group>"; };
+		70491A1D20B9A4D600202952 /* DataTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableView.swift; sourceTree = "<group>"; };
+		70491A1F20B9AA6700202952 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		70F3D86F20B8FF010038D81E /* FIPEnaMao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIPEnaMao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F3D87220B8FF010038D81E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		70F3D87420B8FF010038D81E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		70F3D87420B8FF010038D81E /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
 		70F3D87720B8FF010038D81E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70F3D87920B8FF040038D81E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70F3D87C20B8FF040038D81E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +59,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70491A1A20B9A1EA00202952 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				70F3D89020B91A810038D81E /* Fonts */,
+				70491A1B20B9A21A00202952 /* VehicleTypeView.swift */,
+				70491A1D20B9A4D600202952 /* DataTableView.swift */,
+				70491A1F20B9AA6700202952 /* Animation.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		70F3D86620B8FF010038D81E = {
 			isa = PBXGroup;
 			children = (
@@ -72,10 +89,10 @@
 		70F3D87120B8FF010038D81E /* FIPEnaMao */ = {
 			isa = PBXGroup;
 			children = (
+				70491A1A20B9A1EA00202952 /* Resources */,
 				70F3D89120B997510038D81E /* Models */,
-				70F3D89020B91A810038D81E /* Fonts */,
 				70F3D87220B8FF010038D81E /* AppDelegate.swift */,
-				70F3D87420B8FF010038D81E /* ViewController.swift */,
+				70F3D87420B8FF010038D81E /* FirstScreenViewController.swift */,
 				70F3D87620B8FF010038D81E /* Main.storyboard */,
 				70F3D87920B8FF040038D81E /* Assets.xcassets */,
 				70F3D87B20B8FF040038D81E /* LaunchScreen.storyboard */,
@@ -186,9 +203,12 @@
 			files = (
 				70F3D89520B997AB0038D81E /* CarFunctions.swift in Sources */,
 				70491A1920B99CD900202952 /* Data.swift in Sources */,
-				70F3D87520B8FF010038D81E /* ViewController.swift in Sources */,
+				70491A2020B9AA6700202952 /* Animation.swift in Sources */,
+				70F3D87520B8FF010038D81E /* FirstScreenViewController.swift in Sources */,
+				70491A1E20B9A4D600202952 /* DataTableView.swift in Sources */,
 				70F3D87320B8FF010038D81E /* AppDelegate.swift in Sources */,
 				70F3D89320B9979C0038D81E /* CarModel.swift in Sources */,
+				70491A1C20B9A21A00202952 /* VehicleTypeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

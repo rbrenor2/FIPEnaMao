@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,40 +20,59 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--First Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FIPEnaMao" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FirstScreenViewController" customModule="FIPEnaMao" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TABELA FIPE" textAlignment="natural" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSb-jr-tZ9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TABELA FIPE" textAlignment="natural" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSb-jr-tZ9">
                                 <rect key="frame" x="28" y="7" width="181" height="173"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="173" id="0GY-VO-qmZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DnQ-hH-9Oe">
-                                <rect key="frame" x="-34" y="580" width="443" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DnQ-hH-9Oe">
+                                <rect key="frame" x="-29" y="580" width="428" height="87"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga0-pY-lfV">
-                                        <rect key="frame" x="185" y="30" width="74" height="33"/>
+                                        <rect key="frame" x="177" y="27" width="74" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
                                         <state key="normal" title="Começar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DJH-yQ-nlk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.66274509803921566" green="0.30980392156862746" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DnQ-hH-9Oe" secondAttribute="height" multiplier="125:29" constant="52.999999999999943" id="FSV-os-ewx"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.21568627450980393" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JSb-jr-tZ9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="18f-tv-TY2"/>
+                            <constraint firstItem="DnQ-hH-9Oe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="24" id="3oy-Tv-yc6"/>
+                            <constraint firstItem="DnQ-hH-9Oe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Amb-DF-c0s"/>
+                            <constraint firstItem="JSb-jr-tZ9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-13" id="fVb-0B-Jrf"/>
+                            <constraint firstItem="DnQ-hH-9Oe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-2.5" id="idL-Qz-rnu"/>
+                            <constraint firstItem="DnQ-hH-9Oe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-29" id="qBh-Za-gOI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JSb-jr-tZ9" secondAttribute="trailing" constant="166" id="sLT-CH-6fz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bgButtonView" destination="DnQ-hH-9Oe" id="ONr-u0-fNs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,20 +91,35 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.66274509800000003" green="0.30980392159999998" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcx-zm-OkF">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcx-zm-OkF" customClass="VehicleTypeView" customModule="FIPEnaMao" customModuleProvider="target">
                                 <rect key="frame" x="46" y="167" width="283" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.70588235294117641" green="0.76078431372549016" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3cw-vq-ekw">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3cw-vq-ekw" customClass="VehicleTypeView" customModule="FIPEnaMao" customModuleProvider="target">
                                 <rect key="frame" x="46" y="276" width="283" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.70588235294117641" green="0.76078431372549016" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CZW-1v-FLd">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CZW-1v-FLd" customClass="VehicleTypeView" customModule="FIPEnaMao" customModuleProvider="target">
                                 <rect key="frame" x="46" y="389" width="283" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.70588235294117641" green="0.76078431372549016" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Escolha seu tipo de veículo" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLC-VE-muA">
                                 <rect key="frame" x="48" y="106" width="278" height="26"/>
@@ -137,10 +173,15 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ftq-pu-jpa">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ftq-pu-jpa" customClass="DataTableView" customModule="FIPEnaMao" customModuleProvider="target">
                                 <rect key="frame" x="48" y="167" width="278" height="333"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.2156862745" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -187,10 +228,15 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3ma-3U-MAy">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3ma-3U-MAy" customClass="DataTableView" customModule="FIPEnaMao" customModuleProvider="target">
                                 <rect key="frame" x="48" y="167" width="278" height="333"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.2156862745" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -237,10 +283,15 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jo1-CE-ule">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jo1-CE-ule" customClass="DataTableView" customModule="FIPEnaMao" customModuleProvider="target">
                                 <rect key="frame" x="48" y="167" width="278" height="333"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.2156862745" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -282,23 +333,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TD5-Uu-sDH">
                                 <rect key="frame" x="-37" y="380" width="449" height="199"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R$ 106.608,00" textAlignment="right" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdC-Vf-kGQ">
-                                        <rect key="frame" x="79" y="42" width="300" height="137"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="40"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eB-qi-dZm">
-                                        <rect key="frame" x="69" y="56" width="112" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="18"/>
-                                        <state key="normal" title="preço médio">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" red="0.66274509800000003" green="0.30980392159999998" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mx8-wa-1su">
@@ -321,6 +355,21 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R$ 106.608,00" textAlignment="right" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdC-Vf-kGQ">
+                                <rect key="frame" x="39" y="422" width="300" height="137"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eB-qi-dZm">
+                                <rect key="frame" x="24" y="435" width="112" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="18"/>
+                                <state key="normal" title="preço médio">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.2156862745" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Qtk-KM-7Zy"/>

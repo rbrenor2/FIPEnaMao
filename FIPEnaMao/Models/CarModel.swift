@@ -9,13 +9,13 @@
 import Foundation
 
 class CarModel {
-    let id   : String!
-    let brand: String!
-    let model: String!
-    let year : String!
+    let id   : UUID
+    let brand: String
+    let model: String
+    let year : String
     
     init(brand: String!, model: String!, year: String!) {
-        id = UUID().uuidString
+        id = UUID()
         self.brand = brand
         self.model = model
         self.year  = year
