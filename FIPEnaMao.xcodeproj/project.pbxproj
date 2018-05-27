@@ -11,6 +11,8 @@
 		70491A1C20B9A21A00202952 /* VehicleTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70491A1B20B9A21A00202952 /* VehicleTypeView.swift */; };
 		70491A1E20B9A4D600202952 /* DataTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70491A1D20B9A4D600202952 /* DataTableView.swift */; };
 		70491A2020B9AA6700202952 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70491A1F20B9AA6700202952 /* Animation.swift */; };
+		70491A2120B9FE8F00202952 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70F3D88C20B91A6C0038D81E /* SF-Pro-Text-Bold.otf */; };
+		70491A2220B9FE8F00202952 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70F3D88720B91A690038D81E /* SF-Pro-Text-Medium.otf */; };
 		70F3D87320B8FF010038D81E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3D87220B8FF010038D81E /* AppDelegate.swift */; };
 		70F3D87520B8FF010038D81E /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3D87420B8FF010038D81E /* FirstScreenViewController.swift */; };
 		70F3D87820B8FF010038D81E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F3D87620B8FF010038D81E /* Main.storyboard */; };
@@ -18,9 +20,12 @@
 		70F3D87D20B8FF040038D81E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F3D87B20B8FF040038D81E /* LaunchScreen.storyboard */; };
 		70F3D89320B9979C0038D81E /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3D89220B9979C0038D81E /* CarModel.swift */; };
 		70F3D89520B997AB0038D81E /* CarFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3D89420B997AB0038D81E /* CarFunctions.swift */; };
+		BBFE5D99FAD108903E070563 /* Pods_FIPEnaMao.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5995ECE3C35F3B51B44A6206 /* Pods_FIPEnaMao.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		429017F013C6705D9278FBA2 /* Pods-FIPEnaMao.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIPEnaMao.release.xcconfig"; path = "Pods/Target Support Files/Pods-FIPEnaMao/Pods-FIPEnaMao.release.xcconfig"; sourceTree = "<group>"; };
+		5995ECE3C35F3B51B44A6206 /* Pods_FIPEnaMao.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIPEnaMao.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70491A1820B99CD900202952 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		70491A1B20B9A21A00202952 /* VehicleTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTypeView.swift; sourceTree = "<group>"; };
 		70491A1D20B9A4D600202952 /* DataTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableView.swift; sourceTree = "<group>"; };
@@ -46,6 +51,7 @@
 		70F3D88F20B91A6E0038D81E /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		70F3D89220B9979C0038D81E /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
 		70F3D89420B997AB0038D81E /* CarFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarFunctions.swift; sourceTree = "<group>"; };
+		C55476A906963B565E8B3A59 /* Pods-FIPEnaMao.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIPEnaMao.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FIPEnaMao/Pods-FIPEnaMao.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +59,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBFE5D99FAD108903E070563 /* Pods_FIPEnaMao.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BE0E9CA104F8752E1966EFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5995ECE3C35F3B51B44A6206 /* Pods_FIPEnaMao.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		70491A1A20B9A1EA00202952 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +90,8 @@
 			children = (
 				70F3D87120B8FF010038D81E /* FIPEnaMao */,
 				70F3D87020B8FF010038D81E /* Products */,
+				9450612E6A64CB186CE8621F /* Pods */,
+				2BE0E9CA104F8752E1966EFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +147,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		9450612E6A64CB186CE8621F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C55476A906963B565E8B3A59 /* Pods-FIPEnaMao.debug.xcconfig */,
+				429017F013C6705D9278FBA2 /* Pods-FIPEnaMao.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70F3D88120B8FF040038D81E /* Build configuration list for PBXNativeTarget "FIPEnaMao" */;
 			buildPhases = (
+				54B68EDA20553BD3FF226D5D /* [CP] Check Pods Manifest.lock */,
 				70F3D86B20B8FF010038D81E /* Sources */,
 				70F3D86C20B8FF010038D81E /* Frameworks */,
 				70F3D86D20B8FF010038D81E /* Resources */,
+				F5EDE3616E2DC507170B5CD0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,6 +216,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70491A2120B9FE8F00202952 /* SF-Pro-Text-Bold.otf in Resources */,
+				70491A2220B9FE8F00202952 /* SF-Pro-Text-Medium.otf in Resources */,
 				70F3D87D20B8FF040038D81E /* LaunchScreen.storyboard in Resources */,
 				70F3D87A20B8FF040038D81E /* Assets.xcassets in Resources */,
 				70F3D87820B8FF010038D81E /* Main.storyboard in Resources */,
@@ -195,6 +225,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54B68EDA20553BD3FF226D5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FIPEnaMao-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5EDE3616E2DC507170B5CD0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FIPEnaMao/Pods-FIPEnaMao-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FIPEnaMao/Pods-FIPEnaMao-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		70F3D86B20B8FF010038D81E /* Sources */ = {
@@ -350,6 +419,7 @@
 		};
 		70F3D88220B8FF040038D81E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C55476A906963B565E8B3A59 /* Pods-FIPEnaMao.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -368,6 +438,7 @@
 		};
 		70F3D88320B8FF040038D81E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 429017F013C6705D9278FBA2 /* Pods-FIPEnaMao.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

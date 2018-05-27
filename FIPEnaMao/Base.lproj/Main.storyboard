@@ -29,20 +29,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TABELA FIPE" textAlignment="natural" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSb-jr-tZ9">
-                                <rect key="frame" x="28" y="7" width="181" height="173"/>
+                                <rect key="frame" x="46" y="30" width="181" height="111"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="173" id="0GY-VO-qmZ"/>
+                                    <constraint firstAttribute="height" constant="111" id="0GY-VO-qmZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DnQ-hH-9Oe">
-                                <rect key="frame" x="-29" y="580" width="428" height="87"/>
+                                <rect key="frame" x="-29" y="580" width="428" height="134"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga0-pY-lfV">
-                                        <rect key="frame" x="177" y="27" width="74" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga0-pY-lfV">
+                                        <rect key="frame" x="177" y="23" width="74" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ga0-pY-lfV" secondAttribute="height" multiplier="74:33" id="7iZ-xV-0kF"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
                                         <state key="normal" title="Começar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,24 +56,106 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.66274509803921566" green="0.30980392156862746" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="DnQ-hH-9Oe" secondAttribute="height" multiplier="125:29" constant="52.999999999999943" id="FSV-os-ewx"/>
+                                    <constraint firstAttribute="width" secondItem="DnQ-hH-9Oe" secondAttribute="height" multiplier="125:29" constant="-149.58620689655174" id="FSV-os-ewx"/>
+                                    <constraint firstAttribute="trailing" secondItem="ga0-pY-lfV" secondAttribute="trailing" constant="177" id="GKU-iu-4HO"/>
+                                    <constraint firstItem="ga0-pY-lfV" firstAttribute="leading" secondItem="DnQ-hH-9Oe" secondAttribute="leading" constant="177" id="iHT-Ll-mG0"/>
+                                    <constraint firstItem="ga0-pY-lfV" firstAttribute="top" secondItem="DnQ-hH-9Oe" secondAttribute="top" constant="23" id="jsX-UO-HRL"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YW5-M0-mij" customClass="VehicleTypeView" customModule="FIPEnaMao" customModuleProvider="target">
+                                <rect key="frame" x="46" y="277" width="283" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="delivery-truckIcon" translatesAutoresizingMaskIntoConstraints="NO" id="gqP-wV-9M6">
+                                        <rect key="frame" x="0.0" y="0.0" width="283" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.70588235290000001" green="0.76078431369999999" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pr9-Fd-s9T" customClass="VehicleTypeView" customModule="FIPEnaMao" customModuleProvider="target">
+                                <rect key="frame" x="46" y="383" width="283" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="motorcycle-of-big-size-black-silhouetteIcon" translatesAutoresizingMaskIntoConstraints="NO" id="w7B-6X-gqk">
+                                        <rect key="frame" x="0.0" y="0.0" width="283" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.70588235290000001" green="0.76078431369999999" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcx-zm-OkF" customClass="VehicleTypeView" customModule="FIPEnaMao" customModuleProvider="target">
+                                <rect key="frame" x="46" y="172" width="283" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="carIcon2" translatesAutoresizingMaskIntoConstraints="NO" id="KBL-Gd-N8o">
+                                        <rect key="frame" x="0.0" y="0.0" width="283" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.70588235294117641" green="0.76078431372549016" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Escolha seu tipo de veículo" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uuf-j3-XcS">
+                                <rect key="frame" x="48" y="100" width="278" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dI0-Ho-j5d" customClass="DataTableView" customModule="FIPEnaMao" customModuleProvider="target">
+                                <rect key="frame" x="81" y="383" width="278" height="333"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Escolha a marca" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxc-9R-ua8">
+                                <rect key="frame" x="153" y="98" width="278" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.21568627450980393" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JSb-jr-tZ9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="18f-tv-TY2"/>
+                            <constraint firstItem="JSb-jr-tZ9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="18f-tv-TY2"/>
                             <constraint firstItem="DnQ-hH-9Oe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="24" id="3oy-Tv-yc6"/>
-                            <constraint firstItem="DnQ-hH-9Oe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Amb-DF-c0s"/>
-                            <constraint firstItem="JSb-jr-tZ9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-13" id="fVb-0B-Jrf"/>
+                            <constraint firstItem="DnQ-hH-9Oe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="47" id="Amb-DF-c0s"/>
+                            <constraint firstItem="JSb-jr-tZ9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="fVb-0B-Jrf"/>
                             <constraint firstItem="DnQ-hH-9Oe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-2.5" id="idL-Qz-rnu"/>
                             <constraint firstItem="DnQ-hH-9Oe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-29" id="qBh-Za-gOI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JSb-jr-tZ9" secondAttribute="trailing" constant="166" id="sLT-CH-6fz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JSb-jr-tZ9" secondAttribute="trailing" constant="148" id="sLT-CH-6fz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="bgButtonView" destination="DnQ-hH-9Oe" id="ONr-u0-fNs"/>
+                        <outlet property="brandTableView" destination="dI0-Ho-j5d" id="eFx-JV-7ng"/>
+                        <outlet property="motorcycleButtonView" destination="Pr9-Fd-s9T" id="Q4U-AQ-lfo"/>
+                        <outlet property="questionBrandLabel" destination="cxc-9R-ua8" id="aRX-E0-7O1"/>
+                        <outlet property="questionVehicleLabel" destination="Uuf-j3-XcS" id="bxA-Yr-WVs"/>
+                        <outlet property="titleLabel" destination="JSb-jr-tZ9" id="aEv-PO-3AY"/>
+                        <outlet property="truckButtonView" destination="YW5-M0-mij" id="D9e-TG-yfh"/>
+                        <outlet property="vehicleButtonView" destination="pcx-zm-OkF" id="VTv-TV-ryH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -90,16 +174,6 @@
                                 <rect key="frame" x="-34" y="580" width="443" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.66274509800000003" green="0.30980392159999998" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcx-zm-OkF" customClass="VehicleTypeView" customModule="FIPEnaMao" customModuleProvider="target">
-                                <rect key="frame" x="46" y="167" width="283" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.70588235294117641" green="0.76078431372549016" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3cw-vq-ekw" customClass="VehicleTypeView" customModule="FIPEnaMao" customModuleProvider="target">
                                 <rect key="frame" x="46" y="276" width="283" height="80"/>
@@ -396,4 +470,9 @@
             <point key="canvasLocation" x="3516" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="carIcon2" width="34" height="34"/>
+        <image name="delivery-truckIcon" width="34" height="34"/>
+        <image name="motorcycle-of-big-size-black-silhouetteIcon" width="34" height="34"/>
+    </resources>
 </document>
