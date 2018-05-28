@@ -8,16 +8,53 @@
 
 import Foundation
 
-class CarModel {
-    let id   : UUID
-    let brand: String
-    let model: String
-    let year : String
+struct CarModel : Codable {
+    let valor : String?
+    let marca : String?
+    let modelo : String?
+    let anoModelo : Int?
+    let combustivel : String?
+    let codigoFipe : String?
+    let mesReferencia : String?
+    let tipoVeiculo : Int?
+    let siglaCombustivel : String?
     
-    init(brand: String!, model: String!, year: String!) {
-        id = UUID()
-        self.brand = brand
-        self.model = model
-        self.year  = year
+    enum CodingKeys: String, CodingKey {
+        
+        case valor = "Valor"
+        case marca = "Marca"
+        case modelo = "Modelo"
+        case anoModelo = "AnoModelo"
+        case combustivel = "Combustivel"
+        case codigoFipe = "CodigoFipe"
+        case mesReferencia = "MesReferencia"
+        case tipoVeiculo = "TipoVeiculo"
+        case siglaCombustivel = "SiglaCombustivel"
     }
+    
+//    convenience init(valor: String, marca: String, modelo: String, anoModelo: String, combustivel: String, codigoFipe: String, mesReferencia: String, tipoVeiculo: String, siglaCombustivel: String) {
+//        self.valor            = valor
+//        self.marca            = marca
+//        self.modelo           = modelo
+//        self.anoModelo        = anoModelo
+//        self.combustivel      = combustivel
+//        self.codigoFipe       = codigoFipe
+//        self.mesReferencia    = mesReferencia
+//        self.tipoVeiculo      = tipoVeiculo
+//        self.siglaCombustivel = siglaCombustivel
+//    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        valor = try values.decodeIfPresent(String.self, forKey: .valor)
+        marca = try values.decodeIfPresent(String.self, forKey: .marca)
+        modelo = try values.decodeIfPresent(String.self, forKey: .modelo)
+        anoModelo = try values.decodeIfPresent(Int.self, forKey: .anoModelo)
+        combustivel = try values.decodeIfPresent(String.self, forKey: .combustivel)
+        codigoFipe = try values.decodeIfPresent(String.self, forKey: .codigoFipe)
+        mesReferencia = try values.decodeIfPresent(String.self, forKey: .mesReferencia)
+        tipoVeiculo = try values.decodeIfPresent(Int.self, forKey: .tipoVeiculo)
+        siglaCombustivel = try values.decodeIfPresent(String.self, forKey: .siglaCombustivel)
+    }
+    
 }

@@ -29,9 +29,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TABELA FIPE" textAlignment="natural" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSb-jr-tZ9">
-                                <rect key="frame" x="46" y="30" width="181" height="111"/>
+                                <rect key="frame" x="16" y="30" width="229" height="106"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="111" id="0GY-VO-qmZ"/>
+                                    <constraint firstAttribute="height" constant="106" id="oEw-Gg-wyR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,9 +42,6 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga0-pY-lfV">
                                         <rect key="frame" x="177" y="23" width="74" height="33"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="ga0-pY-lfV" secondAttribute="height" multiplier="74:33" id="7iZ-xV-0kF"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
                                         <state key="normal" title="Começar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,13 +50,25 @@
                                             <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DJH-yQ-nlk"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAx-de-MZ0">
+                                        <rect key="frame" x="177" y="23" width="74" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
+                                        <state key="normal" title="Continue">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="continueButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NS0-Nh-c1U"/>
+                                            <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QeP-tg-lNG"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.66274509803921566" green="0.30980392156862746" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="ga0-pY-lfV" firstAttribute="top" secondItem="DnQ-hH-9Oe" secondAttribute="top" constant="23" id="1hq-L5-o7t"/>
+                                    <constraint firstAttribute="bottom" secondItem="ga0-pY-lfV" secondAttribute="bottom" constant="78" id="4ig-65-xhU"/>
                                     <constraint firstAttribute="width" secondItem="DnQ-hH-9Oe" secondAttribute="height" multiplier="125:29" constant="-149.58620689655174" id="FSV-os-ewx"/>
-                                    <constraint firstAttribute="trailing" secondItem="ga0-pY-lfV" secondAttribute="trailing" constant="177" id="GKU-iu-4HO"/>
-                                    <constraint firstItem="ga0-pY-lfV" firstAttribute="leading" secondItem="DnQ-hH-9Oe" secondAttribute="leading" constant="177" id="iHT-Ll-mG0"/>
-                                    <constraint firstItem="ga0-pY-lfV" firstAttribute="top" secondItem="DnQ-hH-9Oe" secondAttribute="top" constant="23" id="jsX-UO-HRL"/>
+                                    <constraint firstItem="ga0-pY-lfV" firstAttribute="centerX" secondItem="DnQ-hH-9Oe" secondAttribute="centerX" id="br7-jI-XSF"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YW5-M0-mij" customClass="VehicleTypeView" customModule="FIPEnaMao" customModuleProvider="target">
@@ -117,16 +126,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dI0-Ho-j5d" customClass="DataTableView" customModule="FIPEnaMao" customModuleProvider="target">
-                                <rect key="frame" x="81" y="383" width="278" height="333"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Escolha a marca" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxc-9R-ua8">
                                 <rect key="frame" x="153" y="98" width="278" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -134,24 +133,53 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Esolha o modelo" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkY-eC-Ttn">
+                                <rect key="frame" x="202" y="98" width="278" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dI0-Ho-j5d" customClass="DataTableView" customModule="FIPEnaMao" customModuleProvider="target">
+                                <rect key="frame" x="97" y="257" width="278" height="333"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCell" id="1kj-Sm-H3t">
+                                        <rect key="frame" x="0.0" y="28" width="278" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1kj-Sm-H3t" id="7rm-z6-tqQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="278" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.21568627450980393" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JSb-jr-tZ9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="18f-tv-TY2"/>
                             <constraint firstItem="DnQ-hH-9Oe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="24" id="3oy-Tv-yc6"/>
+                            <constraint firstItem="JSb-jr-tZ9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7Pw-G2-Vwt"/>
                             <constraint firstItem="DnQ-hH-9Oe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="47" id="Amb-DF-c0s"/>
-                            <constraint firstItem="JSb-jr-tZ9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="fVb-0B-Jrf"/>
+                            <constraint firstItem="JSb-jr-tZ9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="NIa-DK-XK6"/>
                             <constraint firstItem="DnQ-hH-9Oe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-2.5" id="idL-Qz-rnu"/>
                             <constraint firstItem="DnQ-hH-9Oe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-29" id="qBh-Za-gOI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JSb-jr-tZ9" secondAttribute="trailing" constant="148" id="sLT-CH-6fz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JSb-jr-tZ9" secondAttribute="trailing" constant="130" id="rAR-eF-Cx6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="bgButtonView" destination="DnQ-hH-9Oe" id="ONr-u0-fNs"/>
-                        <outlet property="brandTableView" destination="dI0-Ho-j5d" id="eFx-JV-7ng"/>
+                        <outlet property="continueButton" destination="QAx-de-MZ0" id="5tR-Em-hct"/>
+                        <outlet property="listTableView" destination="dI0-Ho-j5d" id="eFx-JV-7ng"/>
                         <outlet property="motorcycleButtonView" destination="Pr9-Fd-s9T" id="Q4U-AQ-lfo"/>
                         <outlet property="questionBrandLabel" destination="cxc-9R-ua8" id="aRX-E0-7O1"/>
+                        <outlet property="questionModelLabel" destination="DkY-eC-Ttn" id="goq-dh-QPB"/>
                         <outlet property="questionVehicleLabel" destination="Uuf-j3-XcS" id="bxA-Yr-WVs"/>
                         <outlet property="titleLabel" destination="JSb-jr-tZ9" id="aEv-PO-3AY"/>
                         <outlet property="truckButtonView" destination="YW5-M0-mij" id="D9e-TG-yfh"/>

@@ -14,23 +14,23 @@ class CarFunctions {
         
     }
     
-    static func readCars(completion: @escaping ()->()) {
-        // userInteractive is the highest priority
-        DispatchQueue.global(qos: .userInteractive).async { 
-            if Data.tripModels.count == 0 {
-                Data.tripModels.append(CarModel(brand: "Peugeot", model: "RCZ", year: "2015 Gasolina"))
-                Data.tripModels.append(CarModel(brand: "BMW", model: "i3", year: "2018 Elétrico"))
-                Data.tripModels.append(CarModel(brand: "Audi", model: "A4", year: "2015 Gasolina"))
-                Data.tripModels.append(CarModel(brand: "Volkswagen", model: "RCZ", year: "2015 Gasolina"))
-                Data.tripModels.append(CarModel(brand: "Fiat", model: "RCZ", year: "2015 Gasolina"))
-                Data.tripModels.append(CarModel(brand: "Renault", model: "RCZ", year: "2015 Gasolina"))
-                Data.tripModels.append(CarModel(brand: "Peugeot", model: "207", year: "2010 Flex"))
-            }
-            DispatchQueue.main.async {
-                completion()
-            }
-        }
-    }
+//    static func readCars(completion: @escaping ()->()) {
+//        // userInteractive is the highest priority
+//        DispatchQueue.global(qos: .userInteractive).async { 
+//            if Data.tripModels.count == 0 {
+//                Data.tripModels.append(CarModel(brand: "Peugeot", model: "RCZ", year: "2015 Gasolina"))
+//                Data.tripModels.append(CarModel(brand: "BMW", model: "i3", year: "2018 Elétrico"))
+//                Data.tripModels.append(CarModel(brand: "Audi", model: "A4", year: "2015 Gasolina"))
+//                Data.tripModels.append(CarModel(brand: "Volkswagen", model: "RCZ", year: "2015 Gasolina"))
+//                Data.tripModels.append(CarModel(brand: "Fiat", model: "RCZ", year: "2015 Gasolina"))
+//                Data.tripModels.append(CarModel(brand: "Renault", model: "RCZ", year: "2015 Gasolina"))
+//                Data.tripModels.append(CarModel(brand: "Peugeot", model: "207", year: "2010 Flex"))
+//            }
+//            DispatchQueue.main.async {
+//                completion()
+//            }
+//        }
+//    }
     
     static func updateCar(carModel: CarModel) {
         
