@@ -41,7 +41,7 @@
                                 <rect key="frame" x="-29" y="580" width="428" height="134"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga0-pY-lfV">
-                                        <rect key="frame" x="177" y="23" width="74" height="33"/>
+                                        <rect key="frame" x="179" y="23" width="70" height="33"/>
                                         <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
                                         <state key="normal" title="Começar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -181,6 +181,7 @@
                         <outlet property="questionBrandLabel" destination="cxc-9R-ua8" id="aRX-E0-7O1"/>
                         <outlet property="questionModelLabel" destination="DkY-eC-Ttn" id="goq-dh-QPB"/>
                         <outlet property="questionVehicleLabel" destination="Uuf-j3-XcS" id="bxA-Yr-WVs"/>
+                        <outlet property="startButton" destination="ga0-pY-lfV" id="zqL-Nh-JUE"/>
                         <outlet property="titleLabel" destination="JSb-jr-tZ9" id="aEv-PO-3AY"/>
                         <outlet property="truckButtonView" destination="YW5-M0-mij" id="D9e-TG-yfh"/>
                         <outlet property="vehicleButtonView" destination="pcx-zm-OkF" id="VTv-TV-ryH"/>

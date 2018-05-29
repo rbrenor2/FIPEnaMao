@@ -32,18 +32,6 @@ struct CarModel : Codable {
         case siglaCombustivel = "SiglaCombustivel"
     }
     
-//    convenience init(valor: String, marca: String, modelo: String, anoModelo: String, combustivel: String, codigoFipe: String, mesReferencia: String, tipoVeiculo: String, siglaCombustivel: String) {
-//        self.valor            = valor
-//        self.marca            = marca
-//        self.modelo           = modelo
-//        self.anoModelo        = anoModelo
-//        self.combustivel      = combustivel
-//        self.codigoFipe       = codigoFipe
-//        self.mesReferencia    = mesReferencia
-//        self.tipoVeiculo      = tipoVeiculo
-//        self.siglaCombustivel = siglaCombustivel
-//    }
-    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         valor = try values.decodeIfPresent(String.self, forKey: .valor)
