@@ -41,7 +41,7 @@
 		70491A1B20B9A21A00202952 /* VehicleTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTypeView.swift; sourceTree = "<group>"; };
 		70491A1D20B9A4D600202952 /* DataTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableView.swift; sourceTree = "<group>"; };
 		70491A1F20B9AA6700202952 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
-		70AF11EB20BDA75000CD6FC0 /* carAnim3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = carAnim3.json; sourceTree = SOURCE_ROOT; };
+		70AF11EB20BDA75000CD6FC0 /* carAnim3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = carAnim3.json; path = FIPEnaMao/ViewsControllers/carAnim3.json; sourceTree = SOURCE_ROOT; };
 		70E673F020BCC41B001B7150 /* ChooseVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseVehicleView.swift; sourceTree = "<group>"; };
 		70E673F220BCC4E2001B7150 /* ChooseBrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandView.swift; sourceTree = "<group>"; };
 		70F3D86F20B8FF010038D81E /* FIPEnaMao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIPEnaMao.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,7 +91,6 @@
 		70491A1A20B9A1EA00202952 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				70AF11EB20BDA75000CD6FC0 /* carAnim3.json */,
 				7018298B20BCF40900CBE458 /* carAnim.json */,
 				70F3D89020B91A810038D81E /* Fonts */,
 				70491A1B20B9A21A00202952 /* VehicleTypeView.swift */,
@@ -104,6 +103,7 @@
 		70E673EF20BCC3EC001B7150 /* ViewsControllers */ = {
 			isa = PBXGroup;
 			children = (
+				70AF11EB20BDA75000CD6FC0 /* carAnim3.json */,
 				70F3D87420B8FF010038D81E /* FirstScreenViewController.swift */,
 				70E673F020BCC41B001B7150 /* ChooseVehicleView.swift */,
 				70E673F220BCC4E2001B7150 /* ChooseBrandView.swift */,
