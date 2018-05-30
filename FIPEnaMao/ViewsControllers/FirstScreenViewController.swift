@@ -10,7 +10,7 @@ import UIKit
 import Lottie
 
 class FirstScreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+     
     //
     var vehicleChoosen = ""
     var brandChoosen   = ""
