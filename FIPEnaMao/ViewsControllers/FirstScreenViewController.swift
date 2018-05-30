@@ -45,6 +45,10 @@ class FirstScreenViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var bgButtonView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     
+    //
+    let carAnimView = LOTAnimationView(name: "suv4")
+
+    
     var isFirstTimeTapped1: Bool = true
     var isFirstTimeTapped2: Bool = true
     var isFirstTimeTapped3: Bool = true
@@ -66,12 +70,18 @@ class FirstScreenViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let carAnimView = LOTAnimationView(name: "carAnim3")
-        carAnimView.frame = CGRect(x: self.view.bounds.midX, y: self.view.bounds.maxY - self.bgButtonView.frame.height, width: 200, height: 200)
+        let bgButtonHeight = self.view.frame.height/6
+        self.bgButtonView.frame = CGRect(x: 0, y: self.view.frame.maxY - bgButtonHeight, width: self.view.frame.width, height: bgButtonHeight)
+        
+        let carAnimWidth = self.view.frame.height/8
+        let carAnimHeight = carAnimWidth/2
+        carAnimView.frame = CGRect(x: self.view.bounds.midX - 50, y: self.view.bounds.maxY - self.bgButtonView.frame.height - (carAnimHeight/2), width: carAnimWidth, height: carAnimHeight)
+
         carAnimView.contentMode = .scaleAspectFit
+        carAnimView.backgroundColor = .yellow
             
         self.view.addSubview(carAnimView)
-            
+        carAnimView.loopAnimation = true
         carAnimView.play()
         
         self.listTableView.delegate    = self

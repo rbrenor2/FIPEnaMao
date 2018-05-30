@@ -24,7 +24,7 @@ extension FirstScreenViewController {
         let widthQuestion  = Int(self.questionBrandLabel.frame.width)
         let heightQuestion = Int(self.questionBrandLabel.frame.height)
         let widthTable     = Int(self.view.bounds.maxX - 50)
-        let heightTable    = Int(self.view.bounds.maxY - self.bgButtonView.frame.height - 100)
+        let heightTable    = Int(self.view.bounds.height - self.bgButtonView.frame.height - self.carAnimView.frame.height)
         let initialX       = Int(self.view.bounds.maxX)
         let brandTableY    = Int((self.view.bounds.height/2) - CGFloat(heightTable/2))
         let questionY      = brandTableY - Int(self.questionBrandLabel.frame.height) - padding - 10
