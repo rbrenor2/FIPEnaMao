@@ -13,21 +13,21 @@ import UIKit
 extension FirstScreenViewController {
     func setupSecondScreen() {
         UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveLinear, animations: { [unowned self] in
-            self.continueButton.isEnabled = false
-            self.continueButton.alpha     = 1
+            self.mainButtonView.button.isEnabled = false
+            self.mainButtonView.button.alpha     = 1
         })
         self.animateElementsSecondScreen(position: "middle")
     }
     
     func animateElementsSecondScreen(position: String) {
-        let padding        = 30
+        let padding        = 20
         let widthQuestion  = Int(self.questionBrandLabel.frame.width)
         let heightQuestion = Int(self.questionBrandLabel.frame.height)
         let widthTable     = Int(self.view.bounds.maxX - 50)
-        let heightTable    = Int(self.view.bounds.height - self.bgButtonView.frame.height - self.carAnimView.frame.height)
+        let heightTable    = Int(self.view.bounds.height - self.mainButtonView.frame.height - self.carAnimView.frame.height - CGFloat(padding))
         let initialX       = Int(self.view.bounds.maxX)
         let brandTableY    = Int((self.view.bounds.height/2) - CGFloat(heightTable/2))
-        let questionY      = brandTableY - Int(self.questionBrandLabel.frame.height) - padding - 10
+        let questionY      = brandTableY - Int(self.questionBrandLabel.frame.height) - padding
         
         let translationMiddleQuestion = CGFloat(widthQuestion) + (self.view.bounds.width/2) - CGFloat(widthQuestion/2)
         let translationMiddleTable    = CGFloat(widthTable) + (self.view.bounds.width/2) - CGFloat(widthTable/2)
@@ -76,7 +76,7 @@ extension FirstScreenViewController {
         let widthQuestion  = Int(self.questionModelLabel.frame.width)
         let heightQuestion = Int(self.questionModelLabel.frame.height)
         let widthTable     = Int(self.view.bounds.maxX - 50)
-        let heightTable    = Int(self.view.bounds.maxY - self.bgButtonView.frame.height - 100)
+        let heightTable    = Int(self.view.bounds.maxY - self.mainButtonView.frame.height - 100)
         let padding        = 30
         let initialX       = Int(self.view.bounds.maxX)
         let brandTableY    = Int((self.view.bounds.height/2) - (self.listTableView.frame.height/2))

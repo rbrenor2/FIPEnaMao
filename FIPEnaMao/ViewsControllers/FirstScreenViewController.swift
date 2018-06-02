@@ -18,17 +18,17 @@ class FirstScreenViewController: UIViewController, UITableViewDelegate, UITableV
     var yearChoosen    = ""
 
     // First screen
-    @IBOutlet weak var motorcycleButtonView: VehicleTypeView!
-    @IBOutlet weak var truckButtonView: VehicleTypeView!
-    @IBOutlet weak var vehicleButtonView: VehicleTypeView!
+    var motorcycleButtonView: VehicleTypeView!
+    var truckButtonView     : VehicleTypeView!
+    var vehicleButtonView   : VehicleTypeView!
     @IBOutlet weak var questionVehicleLabel: UILabel!
     
     // Table View control
     var currentTable = 1
     var modelsData : CarsModel?
-    var carData : CarModel?
-    var yearsData : [YearsModel]?
-    var brandData : [BrandModel]?
+    var carData    : CarModel?
+    var yearsData  : [YearsModel]?
+    var brandData  : [BrandModel]?
     
     // Second screen
     @IBOutlet weak var listTableView: DataTableView!
@@ -37,81 +37,59 @@ class FirstScreenViewController: UIViewController, UITableViewDelegate, UITableV
     // Third screen
     @IBOutlet weak var questionModelLabel: UILabel!
     
-    @IBOutlet weak var continueButton: UIButton!
-    @IBAction func continueButton(_ sender: Any) {
-    }
     //Initial
-    @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var bgButtonView: UIView!
+    var mainButtonView: MainButtonView!
     @IBOutlet weak var titleLabel: UILabel!
-    
-    //
     let carAnimView = LOTAnimationView(name: "suv4")
 
-    
-    var isFirstTimeTapped1: Bool = true
-    var isFirstTimeTapped2: Bool = true
-    var isFirstTimeTapped3: Bool = true
-    var isFirstTimeTapped4: Bool = true
-
-    @IBAction func startButton(_ sender: Any) {
-        if isFirstTimeTapped1 {
-            isFirstTimeTapped1 = false
-            UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: { [unowned self] in
-                //self.bgButtonView.transform = Animation.rotate()
-                self.startButton.alpha = 0
-                //Car goes to the end
-                }, completion: { [unowned self] (true) in
-                    self.setupFirstScreen()
-            })
-        }
-    }
+//-----------------------//-------------------------//-----------------------//-------------------------//-------------------------
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let bgButtonHeight = self.view.frame.height/6
-        self.bgButtonView.frame = CGRect(x: 0, y: self.view.frame.maxY - bgButtonHeight, width: self.view.frame.width, height: bgButtonHeight)
-        
-        let carAnimWidth = self.view.frame.height/8
-        let carAnimHeight = carAnimWidth/2
-        carAnimView.frame = CGRect(x: self.view.bounds.midX - 50, y: self.view.bounds.maxY - self.bgButtonView.frame.height - (carAnimHeight/2), width: carAnimWidth, height: carAnimHeight)
-
-        carAnimView.contentMode = .scaleAspectFit
-        carAnimView.backgroundColor = .yellow
-            
-        self.view.addSubview(carAnimView)
-        carAnimView.loopAnimation = true
-        carAnimView.play()
+        setupInitialPositionOfElements()
+        setupCarAnimation()
         
         self.listTableView.delegate    = self
         self.listTableView.dataSource  = self
-
-        setupGestureRecognizers()
-        setupInitialPositionOfElements()
     }
     
-    fileprivate func setupGestureRecognizers() {
-        let vehicleTap = UITapGestureRecognizer(target: self, action: #selector(handleVehicleChoice))
-        self.vehicleButtonView.addGestureRecognizer(vehicleTap)
-        
-        let truckTap = UITapGestureRecognizer(target: self, action: #selector(handleTruckChoice))
-        self.truckButtonView.addGestureRecognizer(truckTap)
-        
-        let motorcycleTap = UITapGestureRecognizer(target: self, action: #selector(handleMotorcycleChoice))
-        self.motorcycleButtonView.addGestureRecognizer(motorcycleTap)
+    func start() {
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: { [unowned self] in
+                self.mainButtonView.button.alpha = 0
+            //Car goes to the end
+            }, completion: { [unowned self] (true) in
+                self.setupFirstScreen()
+        })
     }
     
+    fileprivate func setupCarAnimation() {
+        let carAnimWidth  = self.view.frame.height/8
+        let carAnimHeight = carAnimWidth/2
+        carAnimView.frame = CGRect(x: self.view.bounds.midX - (carAnimWidth/2), y: self.view.bounds.maxY - self.mainButtonView.frame.height - carAnimHeight, width: carAnimWidth, height: carAnimHeight)
+        
+        carAnimView.contentMode     = .scaleAspectFit
+        
+        self.view.addSubview(carAnimView)
+        carAnimView.loopAnimation = true
+        carAnimView.play()
+    }
+  
     fileprivate func setupInitialPositionOfElements() {
-        self.continueButton.isEnabled = false
-        self.continueButton.setTitleColor(.gray, for: .disabled)
-        self.continueButton.alpha = 0
-        
+        let mainBtHeight    = self.view.frame.height/8
+        let mainButtonFrame = CGRect(x: 0, y: self.view.frame.maxY - mainBtHeight, width: self.view.frame.width, height: mainBtHeight)
+        self.mainButtonView = MainButtonView(frame: mainButtonFrame)
+        self.mainButtonView.button.isEnabled = true
+        self.mainButtonView.button.alpha     = 1
+        self.mainButtonView.button.setTitle("Começar", for: .normal)
+        self.mainButtonView.button.addTarget(self, action: #selector(setupFirstScreen), for: .touchUpInside)
+        self.view.addSubview(mainButtonView)
+                
         self.animateElementsFirstScreen(position: "init")
         self.animateElementsSecondScreen(position: "init")
         self.animateElementsThirdScreen(position: "init")
     }
-
+    
 }
 
 // Handle TableView
@@ -132,7 +110,7 @@ extension FirstScreenViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.continueButton.isEnabled = true
+        self.mainButtonView.button.isEnabled = true
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

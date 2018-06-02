@@ -11,7 +11,7 @@ import UIKit
 
 // Handle First Screen
 extension FirstScreenViewController {
-    func setupFirstScreen() {
+    @objc func setupFirstScreen() {
         //Label animation
         UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 5, initialSpringVelocity: 10, options: .curveEaseOut, animations: { [unowned self] in
             self.titleLabel.transform = Animation.translateLittleY()
@@ -27,12 +27,23 @@ extension FirstScreenViewController {
         })
     }
     
+    fileprivate func setupGestureRecognizers() {
+        let vehicleTap = UITapGestureRecognizer(target: self, action: #selector(handleVehicleChoice))
+        self.vehicleButtonView.addGestureRecognizer(vehicleTap)
+        
+        let truckTap = UITapGestureRecognizer(target: self, action: #selector(handleTruckChoice))
+        self.truckButtonView.addGestureRecognizer(truckTap)
+        
+        let motorcycleTap = UITapGestureRecognizer(target: self, action: #selector(handleMotorcycleChoice))
+        self.motorcycleButtonView.addGestureRecognizer(motorcycleTap)
+    }
+    
     func animateElementsFirstScreen(position: String) {
         let width     = Int(self.view.bounds.width - 100)
         let height    = 100
         let widthQuestion  = Int(self.questionVehicleLabel.frame.width)
         let heightQuestion = Int(self.questionVehicleLabel.frame.height)
-        let padding   = 30
+        let padding   = 10
         let initialX  = Int(self.view.bounds.maxX)
         
         let truckY    = Int(self.view.bounds.midY - CGFloat(height/2))
@@ -55,10 +66,17 @@ extension FirstScreenViewController {
         
         switch position {
         case "init":
-            vehicleButtonView.frame    = initialFrameVehicle
-            truckButtonView.frame      = initialFrameTruck
-            motorcycleButtonView.frame = initialFrameMotor
+            vehicleButtonView    = VehicleTypeView(frame: initialFrameVehicle)
+            truckButtonView      = VehicleTypeView(frame: initialFrameTruck)
+            motorcycleButtonView = VehicleTypeView(frame: initialFrameMotor)
+            
+            self.view.addSubview(truckButtonView)
+            self.view.addSubview(vehicleButtonView)
+            self.view.addSubview(motorcycleButtonView)
+
             questionVehicleLabel.frame = initialFrameQuestion
+            
+            setupGestureRecognizers()
         case "middle":
             UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: damping, initialSpringVelocity: initialSpringVel, options: .curveEaseIn,animations: { [unowned self] in
                 self.questionVehicleLabel.transform = CGAffineTransform(translationX: -translationMiddleQuestion , y: 0)

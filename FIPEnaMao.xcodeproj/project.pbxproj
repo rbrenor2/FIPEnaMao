@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70295A3720BF639C00E897C4 /* carIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 70295A3620BF639B00E897C4 /* carIcon2.png */; };
 		7029AA7B20BB5F1600DE7E2B /* BrandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7029AA7A20BB5F1500DE7E2B /* BrandModel.swift */; };
 		7029AA7D20BB63F500DE7E2B /* CarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7029AA7C20BB63F500DE7E2B /* CarsModel.swift */; };
 		7029AA7F20BB645600DE7E2B /* YearsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7029AA7E20BB645600DE7E2B /* YearsModel.swift */; };
@@ -17,6 +18,8 @@
 		70491A2120B9FE8F00202952 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70F3D88C20B91A6C0038D81E /* SF-Pro-Text-Bold.otf */; };
 		70491A2220B9FE8F00202952 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70F3D88720B91A690038D81E /* SF-Pro-Text-Medium.otf */; };
 		70AF11FA20BDEDD300CD6FC0 /* suv4.json in Resources */ = {isa = PBXBuildFile; fileRef = 70AF11F920BDEDD300CD6FC0 /* suv4.json */; };
+		70C2223520BF8B9A0013BF45 /* MainButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2223420BF8B9A0013BF45 /* MainButtonView.swift */; };
+		70C2223720BF9A790013BF45 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2223620BF9A790013BF45 /* Colors.swift */; };
 		70E673F120BCC41B001B7150 /* ChooseVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E673F020BCC41B001B7150 /* ChooseVehicleView.swift */; };
 		70E673F320BCC4E2001B7150 /* ChooseBrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E673F220BCC4E2001B7150 /* ChooseBrandView.swift */; };
 		70E673F420BCC6BE001B7150 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3D87420B8FF010038D81E /* FirstScreenViewController.swift */; };
@@ -32,6 +35,7 @@
 		429017F013C6705D9278FBA2 /* Pods-FIPEnaMao.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIPEnaMao.release.xcconfig"; path = "Pods/Target Support Files/Pods-FIPEnaMao/Pods-FIPEnaMao.release.xcconfig"; sourceTree = "<group>"; };
 		5995ECE3C35F3B51B44A6206 /* Pods_FIPEnaMao.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIPEnaMao.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7018298D20BCF54C00CBE458 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70295A3620BF639B00E897C4 /* carIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carIcon2.png; sourceTree = "<group>"; };
 		7029AA7A20BB5F1500DE7E2B /* BrandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandModel.swift; sourceTree = "<group>"; };
 		7029AA7C20BB63F500DE7E2B /* CarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsModel.swift; sourceTree = "<group>"; };
 		7029AA7E20BB645600DE7E2B /* YearsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearsModel.swift; sourceTree = "<group>"; };
@@ -40,6 +44,8 @@
 		70491A1D20B9A4D600202952 /* DataTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableView.swift; sourceTree = "<group>"; };
 		70491A1F20B9AA6700202952 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		70AF11F920BDEDD300CD6FC0 /* suv4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = suv4.json; sourceTree = SOURCE_ROOT; };
+		70C2223420BF8B9A0013BF45 /* MainButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonView.swift; sourceTree = "<group>"; };
+		70C2223620BF9A790013BF45 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		70E673F020BCC41B001B7150 /* ChooseVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseVehicleView.swift; sourceTree = "<group>"; };
 		70E673F220BCC4E2001B7150 /* ChooseBrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandView.swift; sourceTree = "<group>"; };
 		70F3D86F20B8FF010038D81E /* FIPEnaMao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIPEnaMao.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,13 +95,25 @@
 		70491A1A20B9A1EA00202952 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				70F3D87920B8FF040038D81E /* Assets.xcassets */,
+				70295A3620BF639B00E897C4 /* carIcon2.png */,
 				70AF11F920BDEDD300CD6FC0 /* suv4.json */,
 				70F3D89020B91A810038D81E /* Fonts */,
-				70491A1B20B9A21A00202952 /* VehicleTypeView.swift */,
-				70491A1D20B9A4D600202952 /* DataTableView.swift */,
 				70491A1F20B9AA6700202952 /* Animation.swift */,
+				70C2223620BF9A790013BF45 /* Colors.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		70C2223820BF9B940013BF45 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				70F3D87620B8FF010038D81E /* Main.storyboard */,
+				70491A1B20B9A21A00202952 /* VehicleTypeView.swift */,
+				70491A1D20B9A4D600202952 /* DataTableView.swift */,
+				70C2223420BF8B9A0013BF45 /* MainButtonView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		70E673EF20BCC3EC001B7150 /* ViewsControllers */ = {
@@ -131,10 +149,9 @@
 			children = (
 				70491A1A20B9A1EA00202952 /* Resources */,
 				70F3D89120B997510038D81E /* Models */,
-				70F3D87220B8FF010038D81E /* AppDelegate.swift */,
+				70C2223820BF9B940013BF45 /* Views */,
 				70E673EF20BCC3EC001B7150 /* ViewsControllers */,
-				70F3D87620B8FF010038D81E /* Main.storyboard */,
-				70F3D87920B8FF040038D81E /* Assets.xcassets */,
+				70F3D87220B8FF010038D81E /* AppDelegate.swift */,
 				70F3D87B20B8FF040038D81E /* LaunchScreen.storyboard */,
 				70F3D87E20B8FF040038D81E /* Info.plist */,
 			);
@@ -244,6 +261,7 @@
 				70491A2120B9FE8F00202952 /* SF-Pro-Text-Bold.otf in Resources */,
 				70491A2220B9FE8F00202952 /* SF-Pro-Text-Medium.otf in Resources */,
 				70F3D87D20B8FF040038D81E /* LaunchScreen.storyboard in Resources */,
+				70295A3720BF639C00E897C4 /* carIcon2.png in Resources */,
 				70AF11FA20BDEDD300CD6FC0 /* suv4.json in Resources */,
 				70F3D87A20B8FF040038D81E /* Assets.xcassets in Resources */,
 				70F3D87820B8FF010038D81E /* Main.storyboard in Resources */,
@@ -299,6 +317,8 @@
 				70E673F320BCC4E2001B7150 /* ChooseBrandView.swift in Sources */,
 				7029AA7D20BB63F500DE7E2B /* CarsModel.swift in Sources */,
 				70491A1920B99CD900202952 /* DataJSON.swift in Sources */,
+				70C2223720BF9A790013BF45 /* Colors.swift in Sources */,
+				70C2223520BF8B9A0013BF45 /* MainButtonView.swift in Sources */,
 				70491A2020B9AA6700202952 /* Animation.swift in Sources */,
 				70491A1E20B9A4D600202952 /* DataTableView.swift in Sources */,
 				70F3D87320B8FF010038D81E /* AppDelegate.swift in Sources */,
